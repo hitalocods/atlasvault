@@ -4,6 +4,8 @@ out
 dist
 .env
 .next-dev*.log
+.next-start*.log
+.repo-atlas-crm
 *.db
 *.db-journal
 prisma/dev.db
