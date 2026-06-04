@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+  --color-background: oklch(0.08 0.015 270);
+  --color-foreground: oklch(0.96 0.01 270);
+  --color-card: oklch(0.13 0.018 270);
+  --color-card-foreground: oklch(0.96 0.01 270);
+  --color-popover: oklch(0.12 0.018 270);
+  --color-popover-foreground: oklch(0.96 0.01 270);
+  --color-primary: oklch(0.66 0.2 265);
+  --color-primary-foreground: oklch(0.98 0.01 270);
+  --color-secondary: oklch(0.18 0.02 270);
+  --color-secondary-foreground: oklch(0.95 0.01 270);
+  --color-muted: oklch(0.17 0.018 270);
+  --color-muted-foreground: oklch(0.68 0.02 270);
+  --color-accent: oklch(0.2 0.035 270);
+  --color-accent-foreground: oklch(0.97 0.01 270);
+  --color-destructive: oklch(0.62 0.22 25);
+  --color-destructive-foreground: oklch(0.98 0.01 270);
+  --color-border: oklch(0.23 0.025 270);
+  --color-input: oklch(0.2 0.025 270);
+  --color-ring: oklch(0.66 0.2 265);
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-md: calc(var(--radius) * 0.875);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.25);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(80, 93, 255, 0.16), transparent 28rem),
+    radial-gradient(circle at 85% 12%, rgba(147, 51, 234, 0.13), transparent 24rem),
+    linear-gradient(180deg, oklch(0.09 0.018 270), oklch(0.06 0.014 270));
+  color: var(--color-foreground);
+  font-family: var(--font-geist-sans);
+}
+
+::selection {
+  background: rgba(125, 92, 255, 0.45);
+}
+
+.vault-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 70%);
+}
