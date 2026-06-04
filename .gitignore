@@ -6,6 +6,7 @@ dist
 .next-dev*.log
 .next-start*.log
 .repo-atlas-crm
+image.png
 *.db
 *.db-journal
 prisma/dev.db
